@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaader — fotograafia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#too" class="logo">Kaader</a>
+    <ul class="nav-links">
+      <li><a href="#too">Töö</a></li>
+      <li><a href="#minust">Minust</a></li>
+      <li><a href="#teenused">Teenused</a></li>
+      <li><a href="#pakkumine">Kontakt</a></li>
+    </ul>
+    <a href="#pakkumine" class="nav-cta">Küsi pakkumist</a>
+  </div>
+</nav>
+
+<div class="reel-viewport" id="reelViewport">
+  <div class="reel" id="reel">
+
+    <!-- FRAME 1: HERO -->
+    <div class="frame" data-frame="hero">
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0001</span><span>0002</span><span>0003</span><span>0004</span><span>0005</span><span>0006</span><span>0007</span><span>0008</span><span>0009</span><span>0010</span><span>0011</span><span>0012</span><span>0013</span><span>0014</span><span>0015</span><span>0016</span><span>0017</span><span>0018</span><span>0019</span><span>0020</span></div>
+      </div>
+      <div class="frame-content">
+        <header class="hero">
+          <div class="wrap">
+            <div class="hero-inner">
+              <div class="hero-copy">
+                <h1>Iga lugu vajab<br>oma kaadrit.</h1>
+                <p class="hero-sub">Portreedest pulmadeni, brändidest suurüritusteni — jäädvustan hetked, mis kannavad edasi lugu. Üks fotograaf, mitu žanrit, sama tähelepanelik pilk.</p>
+                <div class="hero-actions">
+                  <a href="#pakkumine" class="btn-primary">Küsi pakkumist</a>
+                  <a href="#too" class="btn-ghost">Vaata töid</a>
+                </div>
+              </div>
+              <div class="hero-frame">
+                <div class="hero-frame-tag">f/2.0 · 1/250 · ISO 200</div>
+              </div>
+            </div>
+          </div>
+          <div class="filmstrip">
+            <div class="wrap">
+              <div class="filmstrip-row">
+                <button data-scroll-cat="portree"><span class="fnum">01</span><span class="flabel">Portree</span></button>
+                <button data-scroll-cat="pulm"><span class="fnum">02</span><span class="flabel">Pulm &amp; sündmus</span></button>
+                <button data-scroll-cat="ari"><span class="fnum">03</span><span class="flabel">Äri &amp; bränd</span></button>
+                <button data-scroll-cat="kontsert"><span class="fnum">04</span><span class="flabel">Kontsert &amp; üritus</span></button>
+                <button data-scroll-cat="all"><span class="fnum">05</span><span class="flabel">Kogu portfoolio</span></button>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0001</span><span>0002</span><span>0003</span><span>0004</span><span>0005</span><span>0006</span><span>0007</span><span>0008</span><span>0009</span><span>0010</span><span>0011</span><span>0012</span><span>0013</span><span>0014</span><span>0015</span><span>0016</span><span>0017</span><span>0018</span><span>0019</span><span>0020</span></div>
+      </div>
+    </div>
+
+    <!-- FRAME 2: PORTFOLIO -->
+    <div class="frame" data-frame="too">
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0021</span><span>0022</span><span>0023</span><span>0024</span><span>0025</span><span>0026</span><span>0027</span><span>0028</span><span>0029</span><span>0030</span><span>0031</span><span>0032</span><span>0033</span><span>0034</span><span>0035</span><span>0036</span><span>0037</span><span>0038</span><span>0039</span><span>0040</span></div>
+      </div>
+      <div class="frame-content">
+        <section class="section" id="too">
+          <div class="wrap">
+            <div class="section-head">
+              <h2>Viimased tööd</h2>
+              <p>Valik viimase aja projektidest — igaüks erineva loo, valguse ja meeleoluga.</p>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Filtreeri portfooliot žanri järgi">
+              <button class="tab active" data-filter="all"><span>Kõik</span>
+                <svg class="circle-mark" viewBox="0 0 100 40"><path d="M6,20 C6,8 22,3 50,3 C80,3 94,9 94,20 C94,32 78,36 50,36 C22,36 6,31 6,20 Z"/></svg>
+              </button>
+              <button class="tab" data-filter="portree"><span>Portree</span>
+                <svg class="circle-mark" viewBox="0 0 100 40"><path d="M6,20 C6,8 22,3 50,3 C80,3 94,9 94,20 C94,32 78,36 50,36 C22,36 6,31 6,20 Z"/></svg>
+              </button>
+              <button class="tab" data-filter="pulm"><span>Pulm &amp; sündmus</span>
+                <svg class="circle-mark" viewBox="0 0 100 40"><path d="M6,20 C6,8 22,3 50,3 C80,3 94,9 94,20 C94,32 78,36 50,36 C22,36 6,31 6,20 Z"/></svg>
+              </button>
+              <button class="tab" data-filter="ari"><span>Äri &amp; bränd</span>
+                <svg class="circle-mark" viewBox="0 0 100 40"><path d="M6,20 C6,8 22,3 50,3 C80,3 94,9 94,20 C94,32 78,36 50,36 C22,36 6,31 6,20 Z"/></svg>
+              </button>
+              <button class="tab" data-filter="kontsert"><span>Kontsert &amp; üritus</span>
+                <svg class="circle-mark" viewBox="0 0 100 40"><path d="M6,20 C6,8 22,3 50,3 C80,3 94,9 94,20 C94,32 78,36 50,36 C22,36 6,31 6,20 Z"/></svg>
+              </button>
+            </div>
+
+            <div class="grid">
+              <div class="tile tile--wide" data-cat="portree">
+                <div class="tile-img cat-portree"></div>
+                <div class="tile-caption"><div class="tile-title">Hommikuvalgus</div><div class="tile-meta">Portree · 2026</div></div>
+              </div>
+              <div class="tile" data-cat="pulm">
+                <div class="tile-img cat-pulm"></div>
+                <div class="tile-caption"><div class="tile-title">Suveöö tõotus</div><div class="tile-meta">Pulm · 2025</div></div>
+              </div>
+              <div class="tile tile--tall" data-cat="ari">
+                <div class="tile-img cat-ari"></div>
+                <div class="tile-caption"><div class="tile-title">Linna kohal</div><div class="tile-meta">Äri &amp; bränd · 2026</div></div>
+              </div>
+              <div class="tile" data-cat="kontsert">
+                <div class="tile-img cat-kontsert"></div>
+                <div class="tile-caption"><div class="tile-title">Laval</div><div class="tile-meta">Kontsert · 2025</div></div>
+              </div>
+              <div class="tile" data-cat="portree">
+                <div class="tile-img cat-portree"></div>
+                <div class="tile-caption"><div class="tile-title">Vaikne hetk</div><div class="tile-meta">Portree · 2025</div></div>
+              </div>
+              <div class="tile tile--wide" data-cat="pulm">
+                <div class="tile-img cat-pulm"></div>
+                <div class="tile-caption"><div class="tile-title">Enne "jah"-sõna</div><div class="tile-meta">Pulm · 2026</div></div>
+              </div>
+              <div class="tile" data-cat="ari">
+                <div class="tile-img cat-ari"></div>
+                <div class="tile-caption"><div class="tile-title">Tootekataloog</div><div class="tile-meta">Äri &amp; bränd · 2025</div></div>
+              </div>
+              <div class="tile tile--tall" data-cat="kontsert">
+                <div class="tile-img cat-kontsert"></div>
+                <div class="tile-caption"><div class="tile-title">Rahvamass</div><div class="tile-meta">Üritus · 2026</div></div>
+              </div>
+              <div class="tile" data-cat="portree">
+                <div class="tile-img cat-portree"></div>
+                <div class="tile-caption"><div class="tile-title">Perede vahel</div><div class="tile-meta">Portree · 2026</div></div>
+              </div>
+              <div class="tile" data-cat="pulm">
+                <div class="tile-img cat-pulm"></div>
+                <div class="tile-caption"><div class="tile-title">Esimene tants</div><div class="tile-meta">Pulm · 2025</div></div>
+              </div>
+              <div class="tile tile--wide" data-cat="ari">
+                <div class="tile-img cat-ari"></div>
+                <div class="tile-caption"><div class="tile-title">Kontor öösel</div><div class="tile-meta">Äri &amp; bränd · 2026</div></div>
+              </div>
+              <div class="tile" data-cat="kontsert">
+                <div class="tile-img cat-kontsert"></div>
+                <div class="tile-caption"><div class="tile-title">Backstage</div><div class="tile-meta">Kontsert · 2025</div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0021</span><span>0022</span><span>0023</span><span>0024</span><span>0025</span><span>0026</span><span>0027</span><span>0028</span><span>0029</span><span>0030</span><span>0031</span><span>0032</span><span>0033</span><span>0034</span><span>0035</span><span>0036</span><span>0037</span><span>0038</span><span>0039</span><span>0040</span></div>
+      </div>
+    </div>
+
+    <!-- FRAME 3: MINUST -->
+    <div class="frame" data-frame="minust">
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0041</span><span>0042</span><span>0043</span><span>0044</span><span>0045</span><span>0046</span><span>0047</span><span>0048</span><span>0049</span><span>0050</span><span>0051</span><span>0052</span><span>0053</span><span>0054</span><span>0055</span><span>0056</span><span>0057</span><span>0058</span><span>0059</span><span>0060</span></div>
+      </div>
+      <div class="frame-content">
+        <section class="section about" id="minust">
+          <div class="wrap">
+            <div class="about-inner">
+              <div class="about-visual"></div>
+              <div class="about-text">
+                <h2>Kaamera taga tähelepanuga</h2>
+                <p>Iga kaader algab tähelepanuga — inimesele, valgusele, hetkele. Ma ei otsi žanrit, milles spetsialiseeruda, vaid ausaid hetki, olgu need siis pulmapäeval, stuudios või lava taga.</p>
+                <p>Töötan koos üksikisikute, paaride, ürituste korraldajate ja brändidega, kes hindavad lihtsat, selget ja inimlikku pilti — mitte üleliia lavastatut.</p>
+                <div class="about-stats">
+                  <div><strong>180+</strong><span>projekti</span></div>
+                  <div><strong>4</strong><span>peamist žanrit</span></div>
+                  <div><strong>24h</strong><span>vastamisaeg</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0041</span><span>0042</span><span>0043</span><span>0044</span><span>0045</span><span>0046</span><span>0047</span><span>0048</span><span>0049</span><span>0050</span><span>0051</span><span>0052</span><span>0053</span><span>0054</span><span>0055</span><span>0056</span><span>0057</span><span>0058</span><span>0059</span><span>0060</span></div>
+      </div>
+    </div>
+
+    <!-- FRAME 4: TEENUSED -->
+    <div class="frame" data-frame="teenused">
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0061</span><span>0062</span><span>0063</span><span>0064</span><span>0065</span><span>0066</span><span>0067</span><span>0068</span><span>0069</span><span>0070</span><span>0071</span><span>0072</span><span>0073</span><span>0074</span><span>0075</span><span>0076</span><span>0077</span><span>0078</span><span>0079</span><span>0080</span></div>
+      </div>
+      <div class="frame-content">
+        <section class="section" id="teenused">
+          <div class="wrap">
+            <div class="section-head">
+              <h2>Millega saan aidata</h2>
+              <p>Neli peamist suunda — pakkumise vormis saad täpsustada, mis sinu projekti puhul kõige rohkem loeb.</p>
+            </div>
+            <div class="services-grid">
+              <div class="service-card">
+                <span class="tag">01</span>
+                <h3>Portree</h3>
+                <p>Isiklikud ja äriportreed, LinkedIn-i ja portfoolio jaoks, stuudios või looduslikus valguses.</p>
+              </div>
+              <div class="service-card">
+                <span class="tag">02</span>
+                <h3>Pulm &amp; sündmus</h3>
+                <p>Terve päeva jäädvustamine algusest kuni viimase tantsuni, sekkumata olulistesse hetkedesse.</p>
+              </div>
+              <div class="service-card">
+                <span class="tag">03</span>
+                <h3>Äri &amp; bränd</h3>
+                <p>Tootepildid, meeskonnafotod ja visuaalne sisu, mis sobib nii veebi kui trükisesse.</p>
+              </div>
+              <div class="service-card">
+                <span class="tag">04</span>
+                <h3>Kontsert &amp; üritus</h3>
+                <p>Kiire tempoga sündmused, laval ja publiku seas — energia, mis jääb pärast kestma.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0061</span><span>0062</span><span>0063</span><span>0064</span><span>0065</span><span>0066</span><span>0067</span><span>0068</span><span>0069</span><span>0070</span><span>0071</span><span>0072</span><span>0073</span><span>0074</span><span>0075</span><span>0076</span><span>0077</span><span>0078</span><span>0079</span><span>0080</span></div>
+      </div>
+    </div>
+
+    <!-- FRAME 5: PAKKUMINE + FOOTER -->
+    <div class="frame" data-frame="pakkumine">
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0081</span><span>0082</span><span>0083</span><span>0084</span><span>0085</span><span>0086</span><span>0087</span><span>0088</span><span>0089</span><span>0090</span><span>0091</span><span>0092</span><span>0093</span><span>0094</span><span>0095</span><span>0096</span><span>0097</span><span>0098</span><span>0099</span><span>0100</span></div>
+      </div>
+      <div class="frame-content">
+        <section class="section quote" id="pakkumine">
+          <div class="wrap">
+            <div class="section-head">
+              <h2>Küsi pakkumist</h2>
+              <p>Neli lühikest sammu — vastan tavaliselt 24 tunni jooksul.</p>
+            </div>
+
+            <form class="quote-panel" id="quoteForm" novalidate>
+
+              <div class="progress-row">
+                <span class="progress-label" id="progressLabel">Kaader 01/04</span>
+                <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+              </div>
+
+              <!-- STEP 1 -->
+              <div class="form-step active" data-step="1">
+                <h3>Mis liiki jäädvustust otsid?</h3>
+                <p class="hint">Vali sobivaim suund — muudame vormi järgmisi küsimusi vastavalt sellele.</p>
+                <div class="option-cards">
+                  <label class="option-card">
+                    <input type="radio" name="teenus" value="Portree" required>
+                    <span class="t">Portree</span>
+                    <span class="d">Isiklik, äri- või pere­portree</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="teenus" value="Pulm &amp; sündmus">
+                    <span class="t">Pulm &amp; sündmus</span>
+                    <span class="d">Pulmad, kihlused, perepeod</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="teenus" value="Äri &amp; bränd">
+                    <span class="t">Äri &amp; bränd</span>
+                    <span class="d">Tooted, meeskond, sisu ettevõttele</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="teenus" value="Kontsert &amp; üritus">
+                    <span class="t">Kontsert &amp; üritus</span>
+                    <span class="d">Laval, publiku seas, kiire tempo</span>
+                  </label>
+                  <label class="option-card" style="grid-column:1 / -1;">
+                    <input type="radio" name="teenus" value="Muu">
+                    <span class="t">Midagi muud</span>
+                    <span class="d">Kirjelda täpsemalt järgmises sammus</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+              <div class="form-step" data-step="2">
+                <h3>Projekti detailid</h3>
+                <p class="hint">Kui kuupäev pole veel teada, jäta väli tühjaks — täpsustame hiljem.</p>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="kuupaev">Sündmuse / jäädvustuse kuupäev</label>
+                    <input type="date" id="kuupaev" name="kuupaev">
+                  </div>
+                  <div class="field">
+                    <label for="kestus">Orienteeruv kestus</label>
+                    <select id="kestus" name="kestus">
+                      <option value="">Vali kestus</option>
+                      <option>Kuni 1 tund</option>
+                      <option>2–3 tundi</option>
+                      <option>Pool päeva</option>
+                      <option>Terve päev</option>
+                      <option>Pole veel teada</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="asukoht">Toimumiskoht (linn / aadress)</label>
+                  <input type="text" id="asukoht" name="asukoht" placeholder="Nt Tallinn, Kalamaja">
+                </div>
+                <div class="field">
+                  <label>Asukoha tüüp</label>
+                  <div class="radio-row">
+                    <label><input type="radio" name="asukoha_tyyp" value="Siseruumis">Siseruumis</label>
+                    <label><input type="radio" name="asukoha_tyyp" value="Väljas">Väljas</label>
+                    <label><input type="radio" name="asukoha_tyyp" value="Stuudios">Stuudios</label>
+                    <label><input type="radio" name="asukoha_tyyp" value="Pole otsustatud" checked>Pole veel otsustatud</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="osalejad">Osalejate / inimeste arv</label>
+                  <input type="number" id="osalejad" name="osalejad" min="1" placeholder="Nt 2">
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+              <div class="form-step" data-step="3">
+                <h3>Eelarve ja inspiratsioon</h3>
+                <p class="hint">Aitab pakkuda kohe sobiva mahuga lahendust, mitte üldist hinnakirja.</p>
+                <div class="field">
+                  <label for="eelarve">Orienteeruv eelarve</label>
+                  <select id="eelarve" name="eelarve">
+                    <option value="">Vali vahemik</option>
+                    <option>Kuni 300 €</option>
+                    <option>300–600 €</option>
+                    <option>600–1000 €</option>
+                    <option>1000 €+</option>
+                    <option>Pole veel kindel</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="inspiratsioon">Inspiratsioonilink (Pinterest, Instagram vms)</label>
+                  <input type="text" id="inspiratsioon" name="inspiratsioon" placeholder="Valikuline">
+                </div>
+                <div class="field">
+                  <label for="lisainfo">Lisainfo sinu projekti kohta</label>
+                  <textarea id="lisainfo" name="lisainfo" placeholder="Räägi lühidalt, mida ette kujutad, mis on oluline, kellega tegu on..."></textarea>
+                </div>
+                <div class="field">
+                  <label for="allikas">Kust minust kuulsid?</label>
+                  <select id="allikas" name="allikas">
+                    <option value="">Vali</option>
+                    <option>Instagram</option>
+                    <option>Soovitus</option>
+                    <option>Google</option>
+                    <option>Muu</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- STEP 4 -->
+              <div class="form-step" data-step="4">
+                <h3>Kontaktandmed</h3>
+                <p class="hint">Viimane samm — vastan sulle valitud kanali kaudu 24 tunni jooksul.</p>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="nimi">Nimi</label>
+                    <input type="text" id="nimi" name="nimi" required>
+                  </div>
+                  <div class="field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="telefon">Telefon</label>
+                  <input type="tel" id="telefon" name="telefon" placeholder="Valikuline">
+                </div>
+                <div class="field">
+                  <label>Eelistatud kontakteerumisviis</label>
+                  <div class="radio-row">
+                    <label><input type="radio" name="kontakt_viis" value="E-mail" checked>E-mail</label>
+                    <label><input type="radio" name="kontakt_viis" value="Telefon">Telefon</label>
+                    <label><input type="radio" name="kontakt_viis" value="WhatsApp">WhatsApp</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CONFIRM -->
+              <div class="form-step" data-step="confirm">
+                <div class="confirm">
+                  <div class="mark">✓</div>
+                  <h3>Aitäh, päring on koostatud!</h3>
+                  <p>Võtan sinuga peagi ise ühendust valitud kanali kaudu. Kui soovid vahepeal midagi täpsustada, kirjuta otse.</p>
+                </div>
+              </div>
+
+              <div class="step-nav" id="stepNav">
+                <button type="button" class="btn-back" id="btnBack" style="visibility:hidden;">← Tagasi</button>
+                <button type="button" class="btn-primary" id="btnNext">Edasi →</button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+        <footer>
+          <div class="wrap">
+            <span>© 2026 Kaader. Kõik õigused kaitstud.</span>
+            <div>
+              <a href="#">Instagram</a>
+              <a href="#">E-mail</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="frame-edge" aria-hidden="true">
+        <div class="frame-edge-text"><span>0081</span><span>0082</span><span>0083</span><span>0084</span><span>0085</span><span>0086</span><span>0087</span><span>0088</span><span>0089</span><span>0090</span><span>0091</span><span>0092</span><span>0093</span><span>0094</span><span>0095</span><span>0096</span><span>0097</span><span>0098</span><span>0099</span><span>0100</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="reel-indicator" aria-hidden="true">
+  <span id="reelIndicatorLabel">Kaader 01 / 05</span>
+  <div class="reel-indicator-track"><div class="reel-indicator-fill" id="reelIndicatorFill"></div></div>
+</div>
+<div class="reel-hint" aria-hidden="true">keri või ← → liikumiseks</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

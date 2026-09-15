@@ -1,0 +1,27 @@
+# Sõltuvused
+node_modules/
+
+# Build / väljundkaustad
+dist/
+build/
+.cache/
+
+# Keskkonnamuutujad (API võtmed, saladused — ei lähe kunagi repos!)
+.env
+.env.local
+.env.*.local
+
+# Netlify
+.netlify/
+
+# Toimetaja / OS failid
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logid
+*.log
+npm-debug.log*
