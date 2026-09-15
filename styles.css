@@ -11,6 +11,7 @@
     --line-dark:#34343C;
     --nav-h:76px;
     --edge-h:51px;
+    --rail-w:26px;
   }
 
   *{ box-sizing:border-box; }
@@ -638,7 +639,42 @@
     .reel-indicator, .reel-hint{ display:none; }
 
     .reel-viewport{ height:auto; overflow:visible; scroll-snap-type:none; }
-    .reel{ display:block; width:auto; height:auto; }
+
+    /* Mobile: the reel turns upright — one continuous film strip running
+       down the page, with perforated rails on both edges instead of
+       horizontal bands chopped between sections. */
+    .reel{
+      display:block;
+      width:auto;
+      height:auto;
+      position:relative;
+      padding-left:var(--rail-w);
+      padding-right:var(--rail-w);
+      background-color:#150806;
+    }
+    .reel::before,
+    .reel::after{
+      content:"";
+      position:absolute;
+      top:0;
+      bottom:0;
+      width:var(--rail-w);
+      background-color:#150806;
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='46'><rect x='5' y='16' width='16' height='14' rx='4' ry='4' fill='%23F5E9D8'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='120'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch' result='t'/><feColorMatrix in='t' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.28 0'/></filter><rect width='26' height='120' filter='url(%23g)'/></svg>"),
+        linear-gradient(180deg, #100704 0%, #2b0d06 22%, #6e1c0a 48%, #2b0d06 74%, #100704 100%);
+      background-repeat: repeat-y, repeat, no-repeat;
+      background-size: 26px 46px, 26px 120px, 100% 100%;
+      background-position: 0 0, 0 0, 0 0;
+      z-index:2;
+    }
+    .reel::before{ left:0; }
+    .reel::after{ right:0; }
+
+    /* Horizontal bands belong to the desktop reel only. */
+    .frame-edge{ display:none; }
+
     .frame{ display:block; width:100%; height:auto; padding-top:0; }
     .frame[data-frame="hero"]{ padding-top:var(--nav-h); }
     .frame-content{ overflow:visible; height:auto; }
@@ -654,7 +690,16 @@
     .field-row, .option-cards{ grid-template-columns:1fr; }
   }
   @media (max-width:560px){
-    .wrap{ padding:0 20px; }
+    :root{ --rail-w:18px; }
+    .reel::before,
+    .reel::after{
+      background-size: 18px 34px, 18px 120px, 100% 100%;
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='34'><rect x='3' y='11' width='12' height='11' rx='3' ry='3' fill='%23F5E9D8'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='120'><filter id='g2'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch' result='t'/><feColorMatrix in='t' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.28 0'/></filter><rect width='18' height='120' filter='url(%23g2)'/></svg>"),
+        linear-gradient(180deg, #100704 0%, #2b0d06 22%, #6e1c0a 48%, #2b0d06 74%, #100704 100%);
+    }
+    .wrap{ padding:0 16px; }
     .services-grid{ grid-template-columns:1fr; }
     .grid{ grid-template-columns:1fr; }
     .tile--wide{ grid-column:span 1; }
