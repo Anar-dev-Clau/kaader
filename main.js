@@ -76,24 +76,43 @@
   window.addEventListener('resize', updateIndicator);
   updateIndicator();
 
-  // Translate vertical wheel input into horizontal reel movement,
-  // but let content that needs vertical scrolling inside a frame scroll normally first.
+  // Translate vertical wheel input into horizontal reel movement.
+  // Steps a whole frame at a time: incremental scrollLeft fights
+  // scroll-snap-type:x mandatory, which snaps the reel straight back.
+  let wheelLock = false;
+  const VERTICAL_SLACK = 40; // ignore tiny overflow caused by rounding
+
+  function goToFrame(index){
+    const clamped = Math.min(Math.max(index, 0), frames.length - 1);
+    reelViewport.scrollTo({ left: frames[clamped].offsetLeft, behavior:'smooth' });
+  }
+
   reelViewport.addEventListener('wheel', function(e){
     if(!isHorizontalMode()) return;
-    const contentEl = e.target.closest('.frame-content');
+
+    // Let a frame with real vertical content scroll itself first.
+    const contentEl = e.target.closest ? e.target.closest('.frame-content') : null;
     if(contentEl){
-      const needsVerticalRoom = contentEl.scrollHeight > contentEl.clientHeight + 1;
-      if(needsVerticalRoom){
+      const overflow = contentEl.scrollHeight - contentEl.clientHeight;
+      if(overflow > VERTICAL_SLACK){
         const atTop = contentEl.scrollTop <= 0;
-        const atBottom = Math.ceil(contentEl.scrollTop + contentEl.clientHeight) >= contentEl.scrollHeight;
-        const scrollingDown = e.deltaY > 0;
-        if(scrollingDown && !atBottom) return;
-        if(!scrollingDown && !atTop) return;
+        const atBottom = Math.ceil(contentEl.scrollTop + contentEl.clientHeight) >= contentEl.scrollHeight - 1;
+        const down = e.deltaY > 0;
+        if(down && !atBottom) return;
+        if(!down && !atTop) return;
       }
     }
+
     e.preventDefault();
+    if(wheelLock) return;
+
     const delta = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
-    reelViewport.scrollLeft += delta;
+    if(Math.abs(delta) < 4) return;
+
+    goToFrame(currentFrameIndex() + (delta > 0 ? 1 : -1));
+
+    wheelLock = true;
+    setTimeout(function(){ wheelLock = false; }, 620);
   }, { passive:false });
 
   // Keyboard arrow navigation between frames (skips form controls)
@@ -102,11 +121,9 @@
     const activeTag = document.activeElement ? document.activeElement.tagName : '';
     if(['INPUT','TEXTAREA','SELECT'].includes(activeTag)) return;
     if(e.key === 'ArrowRight'){
-      const next = frames[Math.min(currentFrameIndex() + 1, frames.length - 1)];
-      reelViewport.scrollTo({ left: next.offsetLeft, behavior:'smooth' });
+      goToFrame(currentFrameIndex() + 1);
     } else if(e.key === 'ArrowLeft'){
-      const prev = frames[Math.max(currentFrameIndex() - 1, 0)];
-      reelViewport.scrollTo({ left: prev.offsetLeft, behavior:'smooth' });
+      goToFrame(currentFrameIndex() - 1);
     }
   });
 
